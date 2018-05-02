@@ -7,3 +7,10 @@ selenium through maven:
 
 
 https://wiki.saucelabs.com/display/DOCS/Java+Test+Setup+Example
+
+
+
+
+selenium Grid:
+
+
