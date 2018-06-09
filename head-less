@@ -1,0 +1,37 @@
+package automationFramework;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class welcome {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.gecko.driver", "/Users/ubuntu/geckodriver");
+		// Create a new instance of the Firefox driver
+		//WebDriver driver = new FirefoxDriver();
+		FirefoxBinary firefoxBinary = new FirefoxBinary();
+		firefoxBinary.addCommandLineOptions("--headless");
+		FirefoxOptions firefoxOptions = new FirefoxOptions();
+	    firefoxOptions.setBinary(firefoxBinary);
+	FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
+        //Launch the Online Store Website
+		driver.get("http://www.store.demoqa.com");
+
+        // Print a Log In message to the screen
+        System.out.println("Successfully opened the website www.Store.Demoqa.com");
+
+		//Wait for 5 Sec
+		Thread.sleep(10000);
+		
+        // Close the driver
+        driver.quit();
+    }
+
+}
