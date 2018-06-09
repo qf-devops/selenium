@@ -35,3 +35,17 @@ public class welcome {
     }
 
 }
+
+
+
+python:
+
+ from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
+options = Options()
+options.set_headless(headless=True)
+driver = webdriver.Firefox(firefox_options=options, executable_path=r'C:\Utility\BrowserDrivers\geckodriver.exe')
+driver.get("http://google.com/")
+print ("Headless Firefox Initialized")
+driver.quit()
