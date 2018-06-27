@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class FirstTestCase {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.gecko.driver", "/Users/ra263118/Downloads/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/Users/username/Downloads/geckodriver");
 		// Create a new instance of the Firefox driver
 		WebDriver driver = new FirefoxDriver();
 		
